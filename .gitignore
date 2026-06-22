@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.env
+.DS_Store
+.pytest_cache/
+.idea/
+.vscode/
+
+# Interviewer-only materials — do not publish to the candidate-facing repo
+solution/
+EVALUATION_RUBRIC.md

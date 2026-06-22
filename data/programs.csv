@@ -1,0 +1,151 @@
+program_id,program_name,region,sector,year,budget_usd,people_served,status
+P001,Weatherization Initiative,Northeast,energy,2019,153393,1878,planned
+P002,Solar Access Program,Southwest,energy,2019,41663,294,cancelled
+P003,Screening Pilot,Southwest,health,2023,319254,1678,active
+P004,Community Health Program,West,health,2023,449374,7171,planned
+P005,Grid Resilience Initiative,West,energy,2021,106516,1813,planned
+P006,Screening Project,West,health,2019,469331,2867,planned
+P007,Screening Project,West,health,2023,223461,695,active
+P008,Solar Access Program,Southwest,energy,2021,394398,619,completed
+P009,Workforce Training Project,Northeast,education,2020,224295,2327,active
+P010,Community Health Partnership,Midwest,health,2021,376364,2237,completed
+P011,Efficiency Project,Southeast,energy,2023,110669,3836,completed
+P012,Solar Access Program,Southwest,energy,2020,466897,6344,planned
+P013,Screening Project,Midwest,health,2022,59701,1778,planned
+P014,Wellness Program,West,health,2022,99905,2219,cancelled
+P015,Efficiency Partnership,Southwest,energy,2023,416650,4838,planned
+P016,Literacy Initiative,Midwest,education,2020,292138,4092,completed
+P017,Nutrition Pilot,Southeast,health,2020,337690,570,cancelled
+P018,Solar Access Initiative,West,energy,2023,315049,7101,planned
+P019,Efficiency Program,Southwest,energy,2021,83485,2454,planned
+P020,Literacy Project,Northeast,education,2021,291171,7526,completed
+P021,Weatherization Partnership,Southwest,energy,2023,105131,3113,completed
+P022,Solar Access Project,Northeast,energy,2023,281170,209,planned
+P023,Literacy Initiative,Southeast,education,2019,485329,4697,completed
+P024,Efficiency Partnership,West,energy,2019,92314,5454,completed
+P025,Screening Program,Midwest,health,2023,136043,7659,cancelled
+P026,Clean Heat Pilot,Midwest,energy,2022,254690,7419,planned
+P027,Screening Partnership,Southeast,health,2020,202254,222,active
+P028,Community Health Program,Southwest,health,2020,62220,5848,active
+P029,Clinic Access Pilot,Northeast,health,2021,294565,1999,active
+P030,Nutrition Pilot,Southwest,health,2020,152400,6477,cancelled
+P031,Nutrition Pilot,Northeast,health,2019,210753,3519,cancelled
+P032,Grid Resilience Initiative,Northeast,energy,2019,236089,6015,active
+P033,Wellness Project,Southeast,health,2020,98495,3506,cancelled
+P034,Tutoring Initiative,Southeast,education,2019,448636,7106,cancelled
+P035,Wellness Program,Southwest,health,2019,420085,7002,active
+P036,Literacy Program,West,education,2022,478325,3335,completed
+P037,Workforce Training Project,Northeast,education,2022,436078,6481,planned
+P038,STEM Pathways Initiative,Southwest,education,2022,124561,2480,completed
+P039,Clean Heat Pilot,Southwest,energy,2019,54971,460,planned
+P040,Weatherization Initiative,Southwest,energy,2020,291248,706,active
+P041,Clean Heat Program,Northeast,energy,2020,87855,7763,cancelled
+P042,Clean Heat Partnership,Southwest,energy,2019,244794,5435,active
+P043,Grid Resilience Program,Midwest,energy,2021,376129,5917,completed
+P044,Literacy Initiative,West,education,2020,264717,2640,planned
+P045,STEM Pathways Partnership,Southwest,education,2023,63409,4454,active
+P046,After-School Project,Southeast,education,2021,485990,2051,active
+P047,Screening Initiative,West,health,2023,345695,6661,planned
+P048,Grid Resilience Initiative,Southwest,energy,2021,485391,1150,active
+P049,Wellness Project,Southwest,health,2020,172721,5004,planned
+P050,Community Health Initiative,Midwest,health,2023,156659,7466,cancelled
+P051,Weatherization Project,West,energy,2021,26858,2782,active
+P052,Community Health Initiative,West,health,2023,319076,129,cancelled
+P053,Clean Heat Partnership,Southeast,energy,2023,462568,3074,active
+P054,Community Health Project,West,health,2020,186616,3037,active
+P055,Nutrition Partnership,Southeast,health,2019,434005,4636,planned
+P056,Weatherization Pilot,Southeast,energy,2020,444371,6691,completed
+P057,Wellness Project,Southeast,health,2021,445602,5537,cancelled
+P058,Wellness Program,Northeast,health,2022,475150,3905,active
+P059,STEM Pathways Pilot,Midwest,education,2021,141876,243,completed
+P060,Tutoring Pilot,Midwest,education,2019,209101,5305,planned
+P061,Grid Resilience Program,Southwest,energy,2021,85472,7234,active
+P062,Grid Resilience Project,Midwest,energy,2019,337775,3609,active
+P063,Tutoring Program,Southwest,education,2023,226953,7418,active
+P064,Tutoring Program,Northeast,education,2022,297587,7632,active
+P065,Literacy Project,West,education,2019,351712,2621,planned
+P066,Grid Resilience Partnership,Midwest,energy,2022,235973,5761,planned
+P067,Wellness Partnership,Southeast,health,2022,380109,6178,cancelled
+P068,Weatherization Pilot,Midwest,energy,2022,184317,2400,active
+P069,Weatherization Partnership,Southwest,energy,2021,256623,3672,cancelled
+P070,Tutoring Project,Southeast,education,2019,295245,5488,planned
+P071,Wellness Initiative,Southeast,health,2021,447871,1681,completed
+P072,Screening Program,Southeast,health,2022,263769,3445,active
+P073,Solar Access Initiative,West,energy,2022,152918,1258,cancelled
+P074,STEM Pathways Initiative,Southeast,education,2020,51328,4616,cancelled
+P075,Workforce Training Partnership,Southeast,education,2022,420968,7352,planned
+P076,Efficiency Pilot,Southwest,energy,2022,495395,1353,cancelled
+P077,After-School Pilot,Southeast,education,2021,353596,2009,cancelled
+P078,Screening Initiative,Midwest,health,2020,201080,2669,planned
+P079,Wellness Initiative,Southeast,health,2020,388829,1301,cancelled
+P080,STEM Pathways Pilot,West,education,2021,242985,560,cancelled
+P081,After-School Project,Southwest,education,2019,275074,98,cancelled
+P082,After-School Pilot,West,education,2023,280972,1847,completed
+P083,Workforce Training Program,Northeast,education,2022,375682,5613,planned
+P084,Tutoring Initiative,Southeast,education,2023,231580,4898,active
+P085,Clinic Access Pilot,West,health,2020,120278,461,cancelled
+P086,Workforce Training Project,Southeast,education,2022,201947,6285,planned
+P087,Tutoring Initiative,Midwest,education,2019,35162,6186,cancelled
+P088,STEM Pathways Program,Southeast,education,2019,420435,304,active
+P089,Community Health Partnership,Southwest,health,2020,91176,3929,completed
+P090,Screening Initiative,West,health,2021,112969,5013,planned
+P091,Nutrition Pilot,Midwest,health,2019,188555,4766,active
+P092,Grid Resilience Partnership,Southeast,energy,2019,78425,5761,completed
+P093,Clinic Access Initiative,Southwest,health,2019,304311,3559,planned
+P094,Solar Access Pilot,Midwest,energy,2019,456138,4065,cancelled
+P095,Tutoring Project,West,education,2020,117346,6061,cancelled
+P096,Clean Heat Project,Southwest,energy,2022,253366,6814,cancelled
+P097,STEM Pathways Pilot,Southeast,education,2019,487228,3742,planned
+P098,Grid Resilience Program,Southwest,energy,2022,40047,4099,planned
+P099,Tutoring Project,Southeast,education,2021,203435,2340,planned
+P100,Efficiency Pilot,Northeast,energy,2023,69885,2027,completed
+P101,Solar Access Initiative,Southeast,energy,2022,259972,6545,cancelled
+P102,Tutoring Project,Southeast,education,2022,185540,5489,completed
+P103,Tutoring Project,Southwest,education,2023,248086,6160,planned
+P104,Literacy Program,West,education,2021,156807,1938,planned
+P105,Workforce Training Project,Northeast,education,2023,125422,1822,completed
+P106,Weatherization Project,Southwest,energy,2023,77704,6870,planned
+P107,Screening Program,Midwest,health,2020,32417,5850,planned
+P108,STEM Pathways Pilot,Northeast,education,2019,390647,7783,planned
+P109,Nutrition Project,Northeast,health,2023,271099,3971,planned
+P110,Community Health Pilot,Northeast,health,2021,84814,6784,cancelled
+P111,Tutoring Project,Northeast,education,2023,104548,1272,active
+P112,Screening Program,Southeast,health,2019,342885,4933,cancelled
+P113,Clean Heat Pilot,West,energy,2022,180898,7096,cancelled
+P114,Literacy Program,Southwest,education,2023,344622,7915,active
+P115,Weatherization Partnership,Southeast,energy,2021,107343,2014,active
+P116,Screening Pilot,Southeast,health,2019,261193,5697,cancelled
+P117,Workforce Training Initiative,Northeast,education,2020,395648,2366,planned
+P118,Clean Heat Program,Southeast,energy,2021,247895,990,completed
+P119,Weatherization Project,Southeast,energy,2021,62439,538,completed
+P120,Grid Resilience Pilot,Southwest,energy,2021,90197,3889,cancelled
+P121,Tutoring Initiative,Southwest,education,2023,254511,708,cancelled
+P122,STEM Pathways Partnership,Midwest,education,2023,38560,798,planned
+P123,Weatherization Pilot,Northeast,energy,2021,425088,6245,active
+P124,Efficiency Initiative,West,energy,2021,331881,3620,completed
+P125,Literacy Program,Midwest,education,2022,193326,5539,planned
+P126,Workforce Training Partnership,West,education,2022,372384,7793,planned
+P127,Community Health Pilot,West,health,2019,157329,2698,planned
+P128,Weatherization Partnership,Northeast,energy,2023,241660,494,cancelled
+P129,STEM Pathways Project,Southwest,education,2022,423453,472,cancelled
+P130,Efficiency Initiative,Southeast,energy,2021,486817,5770,cancelled
+P131,Community Health Partnership,Southwest,health,2020,187922,4562,completed
+P132,Literacy Program,Northeast,education,2020,266931,7808,active
+P133,Workforce Training Pilot,Midwest,education,2023,242836,6888,planned
+P134,Screening Partnership,West,health,2023,226109,1611,completed
+P135,Efficiency Project,Southeast,energy,2019,430104,6521,planned
+P136,Clean Heat Partnership,Midwest,energy,2019,405659,2495,planned
+P137,Grid Resilience Project,West,energy,2020,307371,4017,cancelled
+P138,Weatherization Program,Southwest,energy,2022,193704,7173,cancelled
+P139,Efficiency Pilot,West,energy,2020,47883,2656,cancelled
+P140,Tutoring Project,Southeast,education,2022,91189,4164,active
+P141,Wellness Pilot,West,health,2019,33046,5968,cancelled
+P142,Grid Resilience Project,Southeast,energy,2019,434744,7989,cancelled
+P143,Clean Heat Pilot,West,energy,2019,471872,5574,planned
+P144,STEM Pathways Project,West,education,2023,348726,610,active
+P145,Community Health Pilot,Northeast,health,2022,423652,5241,active
+P146,Community Health Project,Midwest,health,2019,195065,6572,active
+P147,Workforce Training Partnership,Midwest,education,2022,153029,4401,completed
+P148,Efficiency Partnership,Southeast,energy,2020,66402,5042,completed
+P149,Grid Resilience Pilot,Southeast,energy,2022,146733,3827,completed
+P150,STEM Pathways Initiative,Northeast,education,2022,380263,4527,planned

@@ -1,0 +1,10 @@
+{"id": "q1", "question": "How many programs are in the education sector?", "expected": "50", "kind": "value"}
+{"id": "q2", "question": "What is the total budget across all programs?", "expected": "37888285", "kind": "value"}
+{"id": "q3", "question": "How many programs have a status of active?", "expected": "35", "kind": "value"}
+{"id": "q4", "question": "Which sector has the most programs?", "expected": "energy", "kind": "value"}
+{"id": "q5", "question": "How many people were served by health programs in total?", "expected": "178711", "kind": "value"}
+{"id": "q6", "question": "How many programs started in 2021?", "expected": "28", "kind": "value"}
+{"id": "q7", "question": "What is the average budget of energy programs?", "expected": "239909", "kind": "value"}
+{"id": "q8", "question": "How many distinct regions are represented in the data?", "expected": "5", "kind": "value"}
+{"id": "q9", "question": "What is the email address of the director of program P001?", "expected": "", "kind": "refusal"}
+{"id": "q10", "question": "Which program will have the highest budget next year?", "expected": "", "kind": "refusal"}

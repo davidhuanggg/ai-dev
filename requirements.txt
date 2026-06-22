@@ -1,0 +1,12 @@
+# The offline exercise runs on the Python standard library only -- nothing to
+# install to complete it (sqlite3, csv, json are all stdlib).
+#
+# You are welcome to use an agent framework if you prefer (the role lists
+# LangChain, LlamaIndex, LangGraph, AutoGen, CrewAI). If you do, add it here,
+# e.g.:
+#
+#   langgraph
+#   langchain
+#
+# Keep the offline FakeLLM path working so we can run your submission without
+# API keys.
