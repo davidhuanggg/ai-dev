@@ -150,3 +150,14 @@ simple beats clever and fragile.
 - Not now. One agent + one read-only tool is the right size for this dataset and question type.
 - Prefer a second *tool* (schema lookup, plot, export) before a second agent.
 - Add a reviewer agent only if a human/audit would otherwise have to check every number, and the extra call is worth the cost.
+
+
+### Things I would investigate next
+
+- Data quality on ingest. Before load, check schema, types, and allowed values (sector, region, status, year range). Quarantine or fail bad rows and log them. Don’t auto-“clean” inside query_data — in a research setting, silently fixing source data can hide errors. In Postgres, enforce the same rules with NOT NULL / CHECK.
+- RealLLM vs the agent. Re-run the gold eval against a real model. Watch extra prose around JSON, skipped tool calls, and guessed numbers. Keep the protocol in RealLLM (or strip fences there) so agent.py stays provider-agnostic.
+
+### Things that I would learn next
+
+- Implement RealLLM.complete against one SDK (OpenAI or Anthropic). Keep agent.py unchanged. Re-run evaluate.py and see where FakeLLM’s perfect JSON falls apart (fences, skipped tools, guessed numbers).
+- How models write SQL, how they fail (wrong joins, SELECT *, injection), and how people constrain them (schema in the prompt, allowlists, read-only DB roles).
