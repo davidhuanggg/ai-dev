@@ -108,4 +108,45 @@ simple beats clever and fragile.
 
 ## Production notes
 
-_(Your notes here.)_
+### How would you swap FakeLLM for a real provider, and how would you keep the code provider-agnostic? (llm.py has a stub to point at.) 
+
+- Implement RealLLM.complete with the vendor SDK select it via LLM_PROVIDER = real. Keep the same JSON protocol (`{"tool": "query_data", "sql": "..."}` / `{"answer": "..."}`).
+- Do not change agent.py/evaluate.py
+- Keep the API key and model name in environment variables (e.g. OPENAI_API_KEY, LLM_MODEL). Store them in a local .env that is gitignored .gitignore already lists .env. Commit only a .env.example with empty placeholders, never real keys.
+- Leave fake as the default so eval still runs offline
+- Do not put provider-specific retry/token logic in the agent. If a vendor needs extra headers or tool-calling APIs, adapt that inside `RealLLM` so the agent still sees a string of JSON.
+
+
+
+### How would you evaluate and monitor reliability if this ran in a regulated, research environment?
+
+- Keep the gold eval in CI. Don’t rely on FakeLLM alone once RealLLM is on.
+- Monitor while it runs. Log question, SQL, tool result/error, answer, model + prompt hash, latency so an audit can replay “why this number.”
+- Track pass rate, refusal rate, tool-error rate and latency not just uptime.
+- On failure refuse. Don’t silently answer from the model’s memory.
+- Pin model name + prompt hash in the logs so an audit can say which version produced a result.
+- Separate “the SQL is correct” from “the wording is acceptable.” The current scorer checks values/refusals a human spot-check (or a second judge model) can review tone and over-refusal.
+
+
+### Where would cost and latency come from, and how would you keep them in check?
+
+- Cost = tokens × model calls; latency = those same calls.
+- Bound calls with MAX_STEPS + one retry don’t send full tables back to the model.
+- Keep fake for local/CI; use a small/cheap model if the question is a simple count.
+- Cache identical asks.
+- If a real model is slow, stream the final answer only after the tool returns do not stream guessed SQL.
+
+
+### What would move this from CSV to PostgreSQL, and how would you deploy it?
+
+- Swap the connection in query_data / load_programs_db.
+- Postgres is the source of truth CSV is only how you first loaded it.
+- Read-only DB role + existing SELECT gate.
+- Deploy as a small API in front of the agent, scale the app the DB is the source of truth.
+- Run the same `evaluate.py` gold set against a staging DB snapshot before promoting.
+
+### When (if ever) would you add a second agent?
+
+- Not now. One agent + one read-only tool is the right size for this dataset and question type.
+- Prefer a second *tool* (schema lookup, plot, export) before a second agent.
+- Add a reviewer agent only if a human/audit would otherwise have to check every number, and the extra call is worth the cost.

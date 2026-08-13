@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import List, Dict
 
 from agent import Agent
-
+import re
 QUESTIONS_PATH = Path(__file__).resolve().parent / "eval" / "questions.jsonl"
 
 
@@ -38,7 +38,25 @@ def score_answer(answer: str, expected: str, kind: str) -> bool:
     a match -- e.g. should "37,888,285" match "37888285"? How do you detect a
     refusal without being fooled by an answer that just happens to contain a word?
     """
-    raise NotImplementedError("Implement score_answer (see TODO).")
+    text = str(answer or "").strip()
+    if kind == "value":
+        if expected.isdigit():
+            numbers = re.findall(r"\d+", text.replace(",",""))
+            return expected in numbers
+        return expected.lower() in text.lower()
+    if kind == "refusal":
+        lowered = text.lower()
+        cues = (
+        "don't have",
+        "do not have",
+        "can't answer",
+        "cannot answer",
+        "not in the dataset",
+        "no information",
+        "don't know",
+        )
+        return any(cue in lowered for cue in cues)
+    return False
 
 
 def main() -> None:

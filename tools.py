@@ -45,6 +45,17 @@ def load_programs_db(csv_path: Path = DATA_PATH) -> sqlite3.Connection:
         )
     return con
 
+def is_safe_select(sql:str) -> bool:
+    text = sql.strip()
+    if not text:
+        return False
+    if ';' in text.rstrip(";"):
+        return False
+    upper = text.upper()
+    if not upper.startswith('SELECT'):
+        return False
+    forbidden = ("INSERT", "UPDATE", "DELETE", "DROP", "PRAGMA", "ATTACH")
+    return not any(word in upper for word in forbidden)
 
 def query_data(sql: str, con: sqlite3.Connection | None = None) -> List[list]:
     """
@@ -58,4 +69,14 @@ def query_data(sql: str, con: sqlite3.Connection | None = None) -> List[list]:
          Decide what `query_data` returns or raises on failure, and make sure
          the agent loop can recover from it.
     """
-    raise NotImplementedError("Implement query_data (see TODOs).")
+    if not isinstance(sql, str):
+        raise ValueError("sql must be a string")
+    if not is_safe_select(sql):
+        raise ValueError("Invalid SQL query")
+    if con is None:
+        con = load_programs_db()
+    try:
+        query = con.execute(sql)
+        return [list(row) for row in query.fetchall()]
+    except sqlite3.Error as e:
+        raise ValueError(f"query failed: {e}") from e

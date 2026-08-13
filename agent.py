@@ -61,7 +61,36 @@ class Agent:
           3. Add basic reliability: handle malformed JSON / tool errors, and
              retry the LLM call once before giving up.
         """
-        raise NotImplementedError("Implement the agent loop (see TODOs).")
+        retried = False
+        if not isinstance(question, str) or not question.strip():
+            raise ValueError("Question must be a non-empty string")
+        messages: List[Message] = [{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": question}]
+        for _ in range(MAX_STEPS):
+          try:
+            response = self.llm.complete(messages)
+            if not isinstance(response,str):
+              raise json.JSONDecodeError("Response must be a string","",0)
+            data = json.loads(response)
+            if not isinstance(data,dict):
+              raise json.JSONDecodeError("Response must be a JSON object",response,0)
+          except json.JSONDecodeError:
+            if not retried:
+              retried = True
+              continue
+            raise ValueError("Invalid JSON response")
+          if data.get("tool") == "query_data":
+            try:
+              rows = query_data(data.get("sql"), self.con)
+              content = json.dumps(rows)
+            except ValueError as e:
+              content = json.dumps([[str(e)]])
+            messages.append({"role": "assistant", "content": response})
+            messages.append({"role": "tool", "content":content})
+            continue
+          if "answer" in data:
+              return str(data["answer"])
+        return "No answer found"
+        
 
 
 if __name__ == "__main__":
